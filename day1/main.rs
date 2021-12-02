@@ -4,7 +4,7 @@ use std::io::prelude::*;
 
 fn main() {
     // Read lines
-    let file = File::open("day1-input.txt").expect("no such file");
+    let file = File::open("input.txt").expect("no such file");
     let buf = BufReader::new(file);
     let nums: Vec<i32> = buf.lines().map(|l| l.expect("0").parse::<i32>().unwrap()).collect();
 
