@@ -1,6 +1,6 @@
 use std::fs::File;
-use std::io::BufReader;
 use std::io::prelude::*;
+use std::io::BufReader;
 use std::io::Error;
 
 struct Instruction {
@@ -11,7 +11,7 @@ struct Instruction {
 fn get_instr(line: Result<String, Error>) -> Instruction {
     let lineval = line.expect("aaa 0");
     let split: Vec<&str> = lineval.split(" ").collect();
-    let instr = Instruction{
+    let instr = Instruction {
         direction: split[0].to_string(),
         magnitude: split[1].parse::<i32>().unwrap(),
     };
@@ -31,7 +31,7 @@ fn main() {
             "forward" => horiz += instr.magnitude,
             "down" => depth += instr.magnitude,
             "up" => depth -= instr.magnitude,
-            _ => println!("Failed")
+            _ => println!("Failed"),
         }
     }
 
