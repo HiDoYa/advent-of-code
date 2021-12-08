@@ -1,14 +1,3 @@
-# 0: 7 segments
-# 1: 2 segments
-# 2: 6 segments
-# 3: 5 segments
-# 4: 4 segments
-# 5: 6 segments (has 1 more overlapping with 4 than 2 does)
-# 6: 7 segments (must overlap with 1)
-# 7: 3 segments
-# 8: 8 segments
-# 9: 7 segments (must overlap with 5)
-
 # 1: 2 segments
 # 7: 3 segments
 # 4: 4 segments
@@ -68,7 +57,6 @@ for line in lines:
                 mapping[3] = str
             elif three_overlap(mapping[4], str):
                 mapping[5] = str
-                pass
             else:
                 mapping[2] = str
         if len(str) == 6:
