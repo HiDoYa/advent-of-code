@@ -1,7 +1,3 @@
-def corrupted():
-    pass
-
-
 def __main__():
     t1 = 'test_input.txt'
     t2 = 'input.txt'

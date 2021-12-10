@@ -1,7 +1,3 @@
-def corrupted():
-    pass
-
-
 def __main__():
     t1 = 'test_input.txt'
     t2 = 'input.txt'
@@ -47,23 +43,18 @@ def __main__():
         if not corrupted:
             total_score = 0
             incomplete_lines.append(line)
-            remaining_chars = []
             q.reverse()
             for char in q:
                 if char == '[':
-                    remaining_chars.append(']')
                     total_score *= 5
                     total_score += 2
                 if char == '(':
-                    remaining_chars.append(')')
                     total_score *= 5
                     total_score += 1
                 if char == '{':
-                    remaining_chars.append('}')
                     total_score *= 5
                     total_score += 3
                 if char == '<':
-                    remaining_chars.append('>')
                     total_score *= 5
                     total_score += 4
 
