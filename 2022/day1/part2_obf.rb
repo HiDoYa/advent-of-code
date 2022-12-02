@@ -1,0 +1,1 @@
+p File.open("input.txt").read.split("\n\n").map{|x| x.split("\n").map(&:to_i).sum}.sort.last(3).sum
