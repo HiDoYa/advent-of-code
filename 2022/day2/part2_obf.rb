@@ -1,0 +1,1 @@
+p File.open("input.txt").readlines.map(&:chomp).map{|l| l[2].ord * 3 - 263 + (l[0].ord + l[2].ord - 154) % 3}.sum
