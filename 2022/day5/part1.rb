@@ -29,7 +29,7 @@ instrs_vals.each{|num_move, from_loc, to_loc|
         stacked[from_loc].pop
     }
 
-    popped_vals.reverse.each{ |val|
+    popped_vals.each{ |val|
         stacked[to_loc].push(val)
     }
 }
